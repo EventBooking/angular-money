@@ -1,0 +1,30 @@
+{
+  "name": "angular-money",
+  "version": "0.0.0",
+  "homepage": "https://github.com/EventBooking/angular-money",
+  "authors": [
+    "Mike Walters <mike@eventbooking.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "accounting.js": "^0.4.1",
+    "currency-symbol.js": "^1.0.0",
+    "angular": "^1.5.0",
+    "angular-typescript-module": "https://github.com/EventBooking/angular-typescript-module.git#^v1.0.3",
+    "jquery": "^2.2.1"
+  },
+  "ignore": [
+      "demo",
+      "src",
+      "tests",
+      "typings",
+      "gulpfile.js",
+      "index.html",
+      "karma.conf.js",
+      "package.json",
+      "typings.json"
+  ]
+}

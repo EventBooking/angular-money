@@ -1,0 +1,6 @@
+tests/**/*.js
+node_modules
+bower_components
+typings
+coverage
+npm-debug.log

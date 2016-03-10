@@ -1,0 +1,23 @@
+<html ng-app="demo">
+
+	<head>
+		<link rel="stylesheet" href="demo/stylesheet.css" />
+	</head>
+	
+	<body>
+        
+        <input type="text" money-input="vm.money" currency="USD" ng-model="vm.moneyModel" >
+        <div>
+            money = {{vm.money}}
+        </div>
+        
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="bower_components/accounting.js/accounting.js"></script>
+        <script type="text/javascript" src="bower_components/currency-symbol.js/currency.js"></script>
+		<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-typescript-module/dist/angular-typescript-module.js"></script>
+		<script type="text/javascript" src="dist/angular-money.debug.js"></script>
+		<script type="text/javascript" src="demo/app.js"></script>
+	</body>
+
+</html>
