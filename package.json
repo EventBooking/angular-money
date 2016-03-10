@@ -6,8 +6,8 @@
   "scripts": {
     "test": "tsc:tests:w & karma start",
     "postinstall": "typings install",
-    "tsc": "tsc -p src & gulp postTsc",
-    "tsc:w": "tsc -p src -w & gulp postTsc",
+    "tsc": "tsc -p src",
+    "tsc:w": "tsc -p src -w",
     "tsc:tests": "tsc -p tests",
     "tsc:tests:w": "tsc -p tests -w",
     "bower": "bower",

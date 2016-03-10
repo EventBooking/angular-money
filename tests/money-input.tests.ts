@@ -1,6 +1,3 @@
-/// <reference path="..\typings\main.d.ts" />
-/// <reference path="..\dist\angular-money.debug.d.ts" />
-
 describe('money-input', function() {
 
     beforeEach(angular.mock.module('ngMoney'));

@@ -7,6 +7,14 @@
         "inlineSourceMap": true,
         "inlineSources": true,
         "target": "es5",
-        "out": "dist/angular-money.debug.js"
-    }
+        "out": "dist/angular-money.js"
+    },
+    "files": [
+        "../typings/main.d.ts",
+        "app.ts",
+        "money-input.ts"
+    ],
+    "ignore": [
+        "../typings"
+    ]
 }

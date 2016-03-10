@@ -1,10 +1,18 @@
 {
-  "compilerOptions": {
-    "noImplicitAny": false,
-    "noEmitOnError": true,
-    "removeComments": false,
-    "inlineSourceMap": true,
-    "inlineSources": true,
-    "target": "es5"
-  }
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "noEmitOnError": true,
+        "removeComments": false,
+        "inlineSourceMap": true,
+        "inlineSources": true,
+        "target": "es5"
+    },
+    "files": [
+        "../typings/main.d.ts",
+        "../dist/angular-money.d.ts",
+        "money-input.tests.ts"
+    ],
+    "ignore": [
+        "../typings"
+    ]
 }
