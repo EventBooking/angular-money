@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tsc:tests:w & karma start",
+    "pretest": "npm run tsc:tests:w",
+    "test": "karma start",
     "postinstall": "bower install & typings install",
     "tsc": "tsc -p src",
     "tsc:w": "tsc -p src -w",
