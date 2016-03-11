@@ -12,7 +12,8 @@
     "files": [
         "../typings/main.d.ts",
         "app.ts",
-        "money-input.ts"
+        "money-input.ts",
+        "money-filter.ts"
     ],
     "ignore": [
         "../typings"

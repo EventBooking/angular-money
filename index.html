@@ -6,10 +6,30 @@
 	
 	<body>
         
+        <h2>Money Input</h2>
         <input type="text" money-input="vm.money" currency="USD" ng-model="vm.moneyModel" >
         <div>
             money = {{vm.money}}
         </div>
+        
+        <h2>Money Filter</h2>
+        <div>
+            Value: <input type="text" ng-model="vm.value">
+        </div>
+        <div>
+            Currency: <input type="text" ng-model="vm.currency">
+        </div>
+        <div>result: {{vm.value | money: vm.currency }}</div>
+        <div>abbrev: {{vm.value | money: vm.currency: {abbrev:true} }}</div>
+        
+        <!--ToDo: convert to unit tests-->
+        <h3>value | money</h3>
+        <div>decimal (default currency): {{vm.decimalMoney | money}}</div>
+        <div>decimal with code: {{vm.decimalMoney | money: vm.codeMoney }}</div>
+        <div>money object: {{vm.moneyObject | money }}</div>
+        <div>abbrev K: {{vm.moneyObject1k | money: {abbrev: true} }}</div>
+        <div>abbrev M: {{vm.moneyObject1m | money: {abbrev: true} }}</div>
+        <div>abbrev M @ 1M: {{vm.moneyObjectAt1m | money: {abbrev: true} }}</div>
         
         <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
         <script type="text/javascript" src="bower_components/accounting.js/accounting.js"></script>

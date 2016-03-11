@@ -1,5 +1,4 @@
 module MoneyModule {
-
     declare var accounting: any;
     declare var currency: any;
 

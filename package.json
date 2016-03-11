@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tsc:tests:w & karma start",
-    "postinstall": "typings install",
+    "postinstall": "bower install & typings install",
     "tsc": "tsc -p src",
     "tsc:w": "tsc -p src -w",
     "tsc:tests": "tsc -p tests",

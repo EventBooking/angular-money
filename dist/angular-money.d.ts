@@ -9,3 +9,5 @@ declare module MoneyModule {
         setViewValue(value: any): void;
     }
 }
+declare module MoneyModule {
+}
