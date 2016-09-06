@@ -10,7 +10,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "accounting.js": "^0.4.1",
+    "accounting.js": "https://github.com/EBMike/accounting.js.git#5e537e898a5351951242a65d431a8faf96ff4a48",
     "currency-symbol.js": "^1.0.0",
     "angular": "^1.4.9",
     "angular-typescript-module": "https://github.com/EventBooking/angular-typescript-module.git#^v1.0.3",

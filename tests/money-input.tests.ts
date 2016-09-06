@@ -48,6 +48,13 @@ describe('money-input', function() {
             chai.assert.equal($ctrl.money, '£1,234.50');
         });
 
+        it('8.325 USD sets money to $8.33', () => {
+            var $ctrl = createController();
+            $ctrl.currency = "USD";
+            $ctrl.value = "8.325";
+            chai.assert.equal($ctrl.money, '$8.33');
+        });
+
     });
 
     describe('directive', function() {
