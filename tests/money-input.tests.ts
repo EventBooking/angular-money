@@ -21,7 +21,7 @@ describe('money-input', function() {
             chai.assert.isDefined($ctrl);
             return $ctrl;
         }
-
+        
         it('USD sets symbol to $', () => {
             var $ctrl = createController();
             $ctrl.currency = "USD";
