@@ -12,8 +12,12 @@ module MoneyModule {
                 if (value == null || angular.isString(value) && value.trim().length === 0)
                     return "";
 
+                var _options: any = {
+                    precision: accounting.settings.currency.precision
+                };
+
                 if (angular.isObject(code)) {
-                    options = code;
+                    _options = code;
                     code = null;
                 }
 
@@ -25,24 +29,40 @@ module MoneyModule {
                 if (!options)
                     options = {};
 
-                if (options.abbrev) {
-                    var v = accounting.unformat(value);
+                for(var x in options)
+                    _options[x] = options[x];
 
-                    if (v >= 1000) {
-                        value = v / 1000;
-                        options.precision = 1;
-                        options.format = "%s%vK";
-                    }
+                var v = accounting.unformat(value);
+                if (options.abbrev) {
                     if (v >= 1000000) {
                         value = v / 1000000;
-                        options.precision = 1;
-                        options.format = "%s%vM";
+                        _options.precision = value.toString().indexOf('.') > 0 ? 1 : 0;
+                        _options.format = "%s%vM";
+                    }
+
+                    else if (v >= 1000) {
+                        value = v / 1000;
+                        _options.precision = value.toString().indexOf('.') > 0 ? 1 : 0;
+                        _options.format = "%s%vK";
+                    }
+
+                    else if(v >= 100) {
+                        value = v;
+                        _options.precision = value.toString().indexOf('.') > 0 ? _options.precision : 0;
+                        _options.format = "%s%v";
+                    }
+
+                    else if(v >= 10) {
+                        value = v;
+                        _options.precision = value.toString().indexOf('.') > 0 ? _options.precision : 0;
+                        _options.format = "%s%v";
                     }
                 }
 
-                options.symbol = currency.symbolize(code);
+                _options.symbol = currency.symbolize(code);
 
-                return accounting.formatMoney(value, options);
+                var result = accounting.formatMoney(value, _options);
+                return result;
             }
         }
         
