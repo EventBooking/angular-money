@@ -24,11 +24,11 @@ module.exports = function(config) {
             'dist/**/*.css',
             'demo/**/*.css',
             
-            'bower_components/jquery/dist/jquery.js',
-            'bower_components/accounting.js/accounting.js',
-            'bower_components/currency-symbol.js/currency.js',
-            'bower_components/angular/angular.js',
-            'bower_components/angular-typescript-module/dist/angular-typescript-module.js',
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/accounting/accounting.js',
+            'node_modules/currency-symbol.js/currency.js',
+            'node_modules/angular/angular.js',
+            'node_modules/angular-typescript-module/dist/angular-typescript-module.js',
 			'node_modules/angular-mocks/angular-mocks.js',
             
             'dist/**/*.js',

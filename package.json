@@ -1,17 +1,16 @@
 {
   "name": "angular-money",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "pretest": "npm run tsc:test",
     "test": "karma start",
-    "postinstall": "bower install & typings install",
+    "postinstall": "typings install",
     "tsc": "tsc -p src",
     "tsc:w": "tsc -p src -w",
     "tsc:test": "tsc -p tests",
     "tsc:test:w": "tsc -p tests -w",
-    "bower": "bower",
     "gulp": "gulp",
     "typings": "typings",
     "start": "lite-server"
@@ -27,7 +26,6 @@
   },
   "homepage": "https://github.com/EventBooking/angular-money#readme",
   "devDependencies": {
-    "bower": "^1.7.7",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
@@ -52,5 +50,12 @@
     "mocha": "^2.3.4",
     "phantomjs": "^1.9.19",
     "sinon": "^1.17.2"
+  },
+  "dependencies": {
+    "accounting.js": "github:openexchangerates/accounting.js.git#74a2b12800f0483ffeebf05c00ea52f8dde3ac07",
+    "currency-symbol.js": "^1.0.0",
+    "angular": "^1.4.9",
+    "angular-typescript-module": "github:eventbooking/angular-typescript-module#v2.0.0",
+    "jquery": "^2.2.1"
   }
 }
