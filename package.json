@@ -52,7 +52,7 @@
     "sinon": "^1.17.2"
   },
   "dependencies": {
-    "accounting.js": "github:openexchangerates/accounting.js.git#74a2b12800f0483ffeebf05c00ea52f8dde3ac07",
+    "accounting": "github:openexchangerates/accounting.js.git#74a2b12800f0483ffeebf05c00ea52f8dde3ac07",
     "currency-symbol.js": "^1.0.0",
     "angular": "^1.4.9",
     "angular-typescript-module": "github:eventbooking/angular-typescript-module#v2.0.0",
