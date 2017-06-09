@@ -2,7 +2,8 @@
   "name": "angular-money",
   "version": "2.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/angular-money.js",
+  "typings": "./dist/angular-money.d.ts",
   "scripts": {
     "pretest": "npm run tsc:test",
     "test": "karma start",
@@ -55,7 +56,7 @@
     "accounting": "github:openexchangerates/accounting.js.git#74a2b12800f0483ffeebf05c00ea52f8dde3ac07",
     "currency-symbol.js": "^1.0.0",
     "angular": "^1.4.9",
-    "angular-typescript-module": "github:eventbooking/angular-typescript-module#v2.0.0",
+    "angular-typescript-module": "github:eventbooking/angular-typescript-module#v2.0.1",
     "jquery": "^2.2.1"
   }
 }
