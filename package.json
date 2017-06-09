@@ -1,6 +1,6 @@
 {
   "name": "angular-money",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "",
   "main": "./dist/angular-money.js",
   "typings": "./dist/angular-money.d.ts",
