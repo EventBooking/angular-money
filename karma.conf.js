@@ -24,7 +24,6 @@ module.exports = function(config) {
             'dist/**/*.css',
             'demo/**/*.css',
             
-            'node_modules/jquery/dist/jquery.js',
             'node_modules/accounting/accounting.js',
             'node_modules/currency-symbol.js/currency.js',
             'node_modules/angular/angular.js',
@@ -33,7 +32,7 @@ module.exports = function(config) {
             
             'dist/**/*.js',
             'demo/app.js',
-			'tests/**/*.js'
+			'tests/output/**/*.js'
 		],
 
 

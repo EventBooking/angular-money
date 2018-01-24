@@ -7,15 +7,15 @@
         "inlineSourceMap": true,
         "inlineSources": true,
         "target": "es5",
-        "out": "dist/angular-money.js"
+        "out": "dist/angular-money.js",
+        "types": [
+            "angular",
+            "angular-typescript-module"
+        ]
     },
     "files": [
-        "../typings/main.d.ts",
         "app.ts",
         "money-input.ts",
         "money-filter.ts"
-    ],
-    "ignore": [
-        "../typings"
     ]
 }

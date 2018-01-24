@@ -5,15 +5,20 @@
         "removeComments": false,
         "inlineSourceMap": true,
         "inlineSources": true,
-        "target": "es5"
+        "target": "es5",
+        "outDir": "./output",
+        "types": [
+            "angular",
+            "angular-typescript-module",
+            "angular-mocks",
+            "mocha",
+            "chai",
+            "sinon",
+            "../"
+        ]
     },
     "files": [
-        "../typings/main.d.ts",
-        "../dist/angular-money.d.ts",
         "money-input.tests.ts",
         "money-filter.tests.ts"
-    ],
-    "ignore": [
-        "../typings"
     ]
 }
