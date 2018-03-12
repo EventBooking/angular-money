@@ -7,7 +7,13 @@ module MoneyModule {
             filter(value: any, code?: string, options?: any): string
         }
 
-        class MoneyFilter implements IMoneyFilter {
+        export class MoneyFilter implements IMoneyFilter {
+            private static defaultOptions: any;
+
+            public static configure(defaultOptions: any) {
+                MoneyFilter.defaultOptions = defaultOptions;
+            }
+
             filter(value: any, code?: string, options?: any): string {
                 if (value == null || angular.isString(value) && value.trim().length === 0)
                     return "";
@@ -29,8 +35,11 @@ module MoneyModule {
                 if (!options)
                     options = {};
 
-                for(var x in options)
-                    _options[x] = options[x];
+                _options = {
+                    ..._options,
+                    ...(MoneyFilter.defaultOptions || {}),
+                    ...options
+                }
 
                 var v = accounting.unformat(value);
                 if (options.abbrev) {
