@@ -10,7 +10,7 @@ module MoneyModule {
         private static defaultOptions: any;
         private static defaultCode: string = "USD";
 
-        public static configure(defaultCode: string, defaultOptions: any) {
+        public static configure(defaultCode: string, defaultOptions?: any) {
             MoneyFilter.defaultCode = defaultCode;
             MoneyFilter.defaultOptions = defaultOptions;
         }
@@ -21,12 +21,16 @@ module MoneyModule {
 
             if (angular.isObject(code)) {
                 options = code;
-                code = MoneyFilter.defaultCode;
+                code = null;
             }
 
             if (value.amount) {
                 code = value.currency || code;
                 value = value.amount;
+            }
+
+            if(code == null) {
+                code = MoneyFilter.defaultCode;
             }
 
             var _options: any = {
